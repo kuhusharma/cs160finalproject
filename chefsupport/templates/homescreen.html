@@ -79,8 +79,11 @@
 
 	function addIngredient() {
 
+		var li = document.createElement("li")
+		li.innerHTML = this.
+		li.appendChild(item);
+		document.getElementById("ingredients-list").appendChild(li);
 	}
-
 
 	function findRecipe() {
 
@@ -263,7 +266,7 @@
 				</div>
 			</div>
 			<div class="col-5 mt-2 ml-5 p-5 find-recipe-container section">
-				<ul>
+				<ul class="ingredients-list">
 					<li>Something1</li>
 					<li>Something2</li>
 					<li>Something3</li>
