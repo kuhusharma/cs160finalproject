@@ -112,7 +112,7 @@
 				<div class="ingredients-container">
 					<div class="d-flex flex-row overflow-auto justify-content-center flex-wrap recipe-scroll">
                         {% for recipe in recipes %}
-							<div class="recipe m-3" onclick="displayRecipe('{{recipe}}')">
+							<div class="recipe m-3" onclick="displayRecipe()">
 
 								<div class="row  justify-content-center align-items-center">
 									<div class="col ml-2 mt-2 mr-2">
@@ -129,22 +129,14 @@
 				<div class="row">
                     <div class="col subsection">
                         <p class="h3">Ingredients</p>
-						<ul>
-							
-                            <li></li>
-                            
-                        </ul>
+						<div id="ing-list"></div>
                     </div>
                 </div>
                 <hr>
                 <div class="row">
                     <div class="col subsection">
                         <p class="h3">Directions</p>
-                        <ol>
-                            <li></li>
-                            
-						</ol>
-                    </div>
+						<div id="dir-list"></div>
                 </div>
 			</div>
 		</div>
@@ -155,10 +147,26 @@
 
 	<script type="text/javascript">
 
+		function displayRecipe() {
+			var ingredients = ['12 boneless or boned chicken thighs, breasts, legs, or wings', '⅓ cup chopped Thai basil', '⅓ cup chopped fresh coriander/cilantro', '1 tablespoon minced ginger or (3 tablespoons galangal)', '1 tablespoon minced chili or (4 tablespoons chili oil or powder)', '1 ½ tablespoon soy sauce, dark only', '1 ½ tablespoon fish sauce', '1 ½ tablespoon olive oil', '1 ½ tablespoon sugar, brown only']
+			var directions = ['Combine all ingredients except chicken in a bowl. Mix thoroughly.', 'Add chicken and leave to marinate at least one hour, preferably longer.', 'Grill chicken in the barbecue grill until golden-brown and cooked through. Baste the chicken shortly, if desired.', 'Serve hot and plain over rice, or with other main dishes or side dishes.']
+			var ingstr = "<ul>";
+			var dirstr = "<ol>";
+			ingredients.forEach(function(element) {
+				ingstr += '<li>'+ element + '</li>';
+			}); 
 
-		function displayRecipe(recipe) {
+			ingstr += '</ul>';
+			document.getElementById("ing-list").innerHTML = ingstr;
 
+			directions.forEach(function(element) {
+				dirstr += '<li>'+ element + '</li>';
+			}); 
+
+			dirstr += '</ol>';
+			document.getElementById("dir-list").innerHTML = dirstr;
 		}
+
 	</script>
 </body>
 </html>

@@ -15,4 +15,6 @@ def recipes(request):
 
 def ingredients(request):
     recipes = Recipe.objects.all()
+    ingredients = recipes[0].ingredients;
+    directions = recipes[0].directions;
     return render(request, 'ingredients.html', {'recipes': recipes})
