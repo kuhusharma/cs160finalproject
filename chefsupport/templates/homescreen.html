@@ -64,10 +64,21 @@
 
 	$(document).keyup(function (e) {
 		if ($(".input:focus") && (e.keyCode === 13)) {
-
-			// IMPLEMENT ONLY ABLE TO ADD AVAILABLE OPTIONS
-
-		 	$("#ingredients-list").append("<li>" + $("#tags").val() + "</li>");
+			var children = document.getElementById('ingredients-list').children;
+			let unique = true; 
+			for (let i = 0; i < children.length; i++) {
+				if (children[i].innerText === document.getElementById('tags').value) {
+					unique = false;
+					alert("ingredient already added");
+				}
+			}
+			if (unique) {
+				// IMPLEMENT ONLY ABLE TO ADD AVAILABLE OPTIONS
+				$("#ingredients-list").append("<li>" + $("#tags").val() + "</li>");
+				var count = parseInt(document.getElementById('counter').innerHTML, 10);
+				count++;
+				document.getElementById("counter").innerHTML = count;
+			}
 		}
  	});
 
@@ -128,6 +139,7 @@
 		max-height: 400px;
 		overflow-y: auto;
 	}
+
 
 	</style>
 </head>
@@ -320,14 +332,23 @@
 
 	Array.from(elements).forEach((element) => {
 		element.addEventListener('click', (event) => {
-			var ul = document.getElementById("ingredients-list");
-			var li = document.createElement("li");
-			li.innerHTML = event.target.innerText;
-			ul.appendChild(li);
-			var count = parseInt(document.getElementById('counter').innerHTML, 10);
-    		count++;
-			document.getElementById("counter").innerHTML = count;
-
+			var children = document.getElementById('ingredients-list').children;
+			let unique = true; 
+			for (let i = 0; i < children.length; i++) {
+				if (children[i].innerText === event.target.innerText) {
+					unique = false;
+					alert("ingredient already added");
+				}
+			}
+			if (unique) {
+				var ul = document.getElementById("ingredients-list");
+				var li = document.createElement("li");
+				li.innerHTML = event.target.innerText;
+				ul.appendChild(li);
+				var count = parseInt(document.getElementById('counter').innerHTML, 10);
+				count++;
+				document.getElementById("counter").innerHTML = count;
+			}		
 		});
 	});
 
