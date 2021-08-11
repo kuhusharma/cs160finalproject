@@ -9,5 +9,6 @@ class Recipe(models.Model):
     image = models.URLField(max_length=1000)
 	
     def __str__(self):
-        return self.title + " " + str(self.ingredients) + " " + str(self.directions) + " " + self.image
+        return self.title
+
 
