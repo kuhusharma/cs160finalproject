@@ -8,14 +8,12 @@
 
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
 	<style type="text/css">
 	* {
@@ -84,8 +82,8 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		  <div class="navbar-nav ml-auto">
-			<a class="nav-item nav-link" href="homescreen.html">Find a recipe from ingredients</a>
-			<a class="nav-item nav-link" href="ingredients.html">Find ingredients for a recipe</a>
+			<a class="nav-item nav-link" href="#">Find a recipe from ingredients</a>
+			<a class="nav-item nav-link" href="ingredients">Find ingredients for a recipe</a>
 		  </div>
 		</div>
 	</nav>
@@ -95,7 +93,7 @@
 				<div class="h4">Enter your ingredients</div>
 			</div>
 			<div class="col-5 mt-4 ml-5">
-				<div class="h4">Your ingredients (0)</div>
+				<div class="h4">Your ingredients (<span id="counter" class="h4">0</span>)</div>
 			</div>
 		</div>
 		<div class="row justify-content-center">
@@ -269,6 +267,10 @@
 			var li = document.createElement("li");
 			li.innerHTML = event.target.innerText;
 			ul.appendChild(li);
+			var count = parseInt(document.getElementById('counter').innerHTML, 10);
+    		count++;
+			document.getElementById("counter").innerHTML = count;
+
 		});
 	});
 	</script>
