@@ -38,6 +38,17 @@
 		height: 82vh;
 		border-radius: 25px;
 	}	
+	
+	.accent {
+		background-color: #A6D3A0;
+		border-radius: 25px;
+	}
+
+	.find-recipe {
+		position: absolute;
+		bottom: 16px;
+		right: 28px;
+	}
 
 	.recipe-scroll {
 		overflow-y: auto;
@@ -93,14 +104,21 @@
 			<div class="col-10 mt-3 section">
 				<div class="d-flex flex-row overflow-auto justify-content-center p-4 flex-wrap recipe-scroll">
 					{% for recipe in recipes %}
-					<div class="recipe m-3">
+					<div class="recipe m-3" onclick="displayRecipe()">
 						<div class="recipe-image mx-auto mt-4">
 							<img src={{ recipe.image }} class="recipe-img mx-auto d-block img-fluid" style="max-height: 100%; min-width: 100%; min-height: 100%" />	
 						</div>
 						<p class="text-center">{{recipe.title}}</p>
 					</div>
 					{% endfor %}
-
+					<div class="col subsection">
+                        <p class="h3">Ingredients</p>
+						<div id="ing-list"></div>
+                    </div>
+					<div class="col subsection">
+                        <p class="h3">Directions</p>
+						<div id="dir-list"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -108,5 +126,30 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+
+		function displayRecipe() {
+			var ingredients = ['chocolate ice cream (2 scoops)', 'milk (½ cup)', 'chocolate syrup', 'whipped cream']
+			var directions = ['Put 2 scoops of chocolate ice cream into a blender. Add the milk.', 'Blend the milk and ice cream together and serve immediately.', 'Top with the whipped cream and chocolate syrup.']
+			var ingstr = "<ul>";
+			var dirstr = "<ol>";
+			ingredients.forEach(function(element) {
+				ingstr += '<li>'+ element + '</li>';
+			}); 
+
+			ingstr += '</ul>';
+			ingstr += '<button type="button" class="btn mb-2 find-recipe accent">Add Ingredients to Cart</button>';
+			document.getElementById("ing-list").innerHTML = ingstr;
+
+			directions.forEach(function(element) {
+				dirstr += '<li>'+ element + '</li>';
+			}); 
+
+			dirstr += '</ol>';
+			document.getElementById("dir-list").innerHTML = dirstr;
+		}
+
+	</script>
 </body>
 </html>
