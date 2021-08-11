@@ -35,7 +35,7 @@
 
 	.section {
 		background-color: #F7EDE2;
-		height: 85vh;
+		height: 80vh;
 		border-radius: 25px;
 	}	
 
@@ -49,7 +49,7 @@
 	}
 
 	.dropdown {
-		height: 11vh;
+		height: 8vh;
 		display: flex;
     	align-items: center;
 	}
@@ -66,6 +66,11 @@
 
 	.plus {
 		font-size: 32px;
+	}
+
+	.dropdown-menu{
+		max-height: 400px;
+		overflow-y: auto;
 	}
 
 
@@ -100,57 +105,146 @@
 				<div class="ingredients-container mt-4">
 					<hr>
 					<div class="dropdown">
-						<div class="h4">Dairy</div> <button class="btn ml-auto plus" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Separated link</a>
+						<div class="h4">Dairy</div> 
+						<div class="btn-group dropleft ml-auto">
+							<button class="btn plus" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">butter</a>
+								<a class="dropdown-item" href="#">eggs</a>
+								<a class="dropdown-item" href="#">cheese</a>
+								<a class="dropdown-item" href="#">milk</a>
+								<a class="dropdown-item" href="#">yogurt</a>
+								<a class="dropdown-item" href="#">cream cheese</a>
+								<a class="dropdown-item" href="#">cottage cheese</a>
+								<a class="dropdown-item" href="#">cheese</a>
+								<a class="dropdown-item" href="#">ice cream</a>
+							</div>
 						</div>
 					</div>
 					<hr>
 					<div class="dropdown">
-						<div class="h4">Vegetables</div> <button class="btn ml-auto plus" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Separated link</a>
+						<div class="h4">Vegetables</div> 
+						<div class="btn-group dropleft ml-auto">
+							<button class="btn plus" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">onion</a>
+								<a class="dropdown-item" href="#">garlic</a>
+								<a class="dropdown-item" href="#">tomato</a>
+								<a class="dropdown-item" href="#">lettuce</a>
+								<a class="dropdown-item" href="#">potato</a>
+								<a class="dropdown-item" href="#">carrot</a>
+								<a class="dropdown-item" href="#">bell pepper</a>
+								<a class="dropdown-item" href="#">basil</a>
+								<a class="dropdown-item" href="#">broccoli</a>
+								<a class="dropdown-item" href="#">corn</a>
+								<a class="dropdown-item" href="#">spinach</a>
+								<a class="dropdown-item" href="#">mushroom</a>
+								<a class="dropdown-item" href="#">green beans</a>
+								<a class="dropdown-item" href="#">celery</a>
+								<a class="dropdown-item" href="#">avocado</a>
+								<a class="dropdown-item" href="#">cilantro</a>
+								<a class="dropdown-item" href="#">artichoke</a>
+								<a class="dropdown-item" href="#">cabbage</a>
+								<a class="dropdown-item" href="#">cauliflower</a>
+								<a class="dropdown-item" href="#">kale</a>
+								<a class="dropdown-item" href="#">asparagus</a>
+							</div>
 						</div>
 					</div>
 					<hr>
 					<div class="dropdown">
-						<div class="h4">Fruits</div> <button class="btn ml-auto plus" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Separated link</a>
+						<div class="h4">Fruits</div> 
+						<div class="btn-group dropup ml-auto">
+							<button class="btn plus" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">lemon</a>
+								<a class="dropdown-item" href="#">apple</a>
+								<a class="dropdown-item" href="#">banana</a>
+								<a class="dropdown-item" href="#">lime</a>
+								<a class="dropdown-item" href="#">strawberry</a>
+								<a class="dropdown-item" href="#">orange</a>
+								<a class="dropdown-item" href="#">pineapple</a>
+								<a class="dropdown-item" href="#">blueberry</a>
+								<a class="dropdown-item" href="#">raisin</a>
+								<a class="dropdown-item" href="#">coconut</a>
+								<a class="dropdown-item" href="#">grape</a>
+								<a class="dropdown-item" href="#">peach</a>
+								<a class="dropdown-item" href="#">berries</a>
+								<a class="dropdown-item" href="#">plum</a>
+								<a class="dropdown-item" href="#">mango</a>
+								<a class="dropdown-item" href="#">pear</a>
+								<a class="dropdown-item" href="#">apricot</a>
+								<a class="dropdown-item" href="#">watermlon</a>
+								<a class="dropdown-item" href="#">pomegranate</a>
+								<a class="dropdown-item" href="#">nectarine</a>
+								<a class="dropdown-item" href="#">tangerine</a>
+							</div>
 						</div>
 					</div>
 					<hr>
 					<div class="dropdown">
-						<div class="h4">Grains</div> <button class="btn ml-auto plus" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Separated link</a>
+						<div class="h4">Baking + Grains</div> 
+						<div class="btn-group dropup ml-auto">
+							<button class="btn plus" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">rice</a>
+								<a class="dropdown-item" href="#">pasta</a>
+								<a class="dropdown-item" href="#">flour</a>
+								<a class="dropdown-item" href="#">bread</a>
+								<a class="dropdown-item" href="#">noodle</a>
+								<a class="dropdown-item" href="#">ramen</a>
+								<a class="dropdown-item" href="#">biscuits</a>
+								<a class="dropdown-item" href="#">starch</a>
+								<a class="dropdown-item" href="#">wheat</a>
+								<a class="dropdown-item" href="#">cream of wheat</a>
+								<a class="dropdown-item" href="#">cornbread</a>
+								<a class="dropdown-item" href="#">cornflour</a>
+								<a class="dropdown-item" href="#">pizza dough</a>
+								<a class="dropdown-item" href="#">english muffin</a>
+								<a class="dropdown-item" href="#">hot dog bun</a>
+								<a class="dropdown-item" href="#">croutons</a>
+								<a class="dropdown-item" href="#">ravioli</a>
+								<a class="dropdown-item" href="#">gnocchi</a>
+								<a class="dropdown-item" href="#">croissants</a>
+								<a class="dropdown-item" href="#">buckwheat</a>
+							</div>
 						</div>
 					</div>
 					<hr>
 					<div class="dropdown">
-						<div class="h4">Protein</div> <button class="btn ml-auto plus" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Separated link</a>
+						<div class="h4">Protein</div> 
+						<div class="btn-group dropup ml-auto">
+							<button class="btn ml-auto plus" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">chicken</a>
+								<a class="dropdown-item" href="#">beef</a>
+								<a class="dropdown-item" href="#">bacon</a>
+								<a class="dropdown-item" href="#">ham</a>
+								<a class="dropdown-item" href="#">turkey</a>
+								<a class="dropdown-item" href="#">pork</a>
+								<a class="dropdown-item" href="#">pepperoni</a>
+								<a class="dropdown-item" href="#">chorizo</a>
+								<a class="dropdown-item" href="#">salami</a>
+								<a class="dropdown-item" href="#">spam</a>
+								<a class="dropdown-item" href="#">lamb</a>
+								<a class="dropdown-item" href="#">prosciutto</a>
+								<a class="dropdown-item" href="#">tuna</a>
+								<a class="dropdown-item" href="#">salmon</a>
+								<a class="dropdown-item" href="#">cod</a>
+								<a class="dropdown-item" href="#">tilapia</a>
+								<a class="dropdown-item" href="#">trout</a>
+								<a class="dropdown-item" href="#">sardines</a>
+								<a class="dropdown-item" href="#">anchovies</a>
+								<a class="dropdown-item" href="#">shrimp</a>
+								<a class="dropdown-item" href="#">crab</a>
+								<a class="dropdown-item" href="#">prawns</a>
+								<a class="dropdown-item" href="#">scallops</a>
+								<a class="dropdown-item" href="#">clams</a>
+								<a class="dropdown-item" href="#">lobster</a>
+								<a class="dropdown-item" href="#">mussels</a>
+								<a class="dropdown-item" href="#">oysters</a>
+								<a class="dropdown-item" href="#">squid</a>
+							</div>
 						</div>
 					</div>
 					<hr>
