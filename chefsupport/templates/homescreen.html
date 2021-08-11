@@ -371,7 +371,7 @@
 			<div class="col-5 mt-2 ml-5 p-5 find-recipe-container section">
 				<ul id="ingredients-list">
 				</ul>
-				<button type="button" class="btn mb-2 find-recipe accent">Find a Recipe</button>
+				<button type="button" class="btn mb-2 find-recipe accent" onclick="findRecipe()">Find a Recipe</button>
 			</div>
 		</div>
 	</div>
@@ -405,6 +405,15 @@
 		var ul = document.getElementById("ingredients-list");
 		ul.innerHTML = "";
 		document.getElementById("counter").innerHTML = 0;
+	}
+
+	function findRecipe() {
+		var lis = document.querySelectorAll('#ingredients-list li');
+		arr = [];
+		for (var i = 0; i < lis.length; i++) {
+			arr.push(lis[i].innerText);
+		}
+		window.location.href = "/chefsupport/recipes"
 	}
 
 	</script>
