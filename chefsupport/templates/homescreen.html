@@ -187,14 +187,14 @@
 		  </div>
 		</div>
 	</nav>
-	<div class="container">
+	<div class="container" style="overflow-y:scroll;">
 		<div class="row justify-content-center">
 			<div class="col-5 mt-4 mr-5">
 				<div class="h4">Enter your ingredients</div>
 			</div>
 			<div class="col-5 mt-4 ml-5">
-				<div class="d-flex align-items-center">
-					<div class="h4">Your ingredients (<span id="counter" class="h4">0</span>)</div>
+				<div class="d-flex align-items-center" >
+					<div class="h4" >Your ingredients (<span id="counter" class="h4">0</span>)</div>
 					<button type="button" class='btn btn-dark ml-auto' onclick="clearIngredients()">Clear Ingredients List</button>
 				</div>
 			</div>
@@ -369,7 +369,7 @@
 				</div>
 			</div>
 			<div class="col-5 mt-2 ml-5 p-5 find-recipe-container section">
-				<ul id="ingredients-list">
+				<ul id="ingredients-list" >
 				</ul>
 				<button type="button" class="btn mb-2 find-recipe accent" onclick="findRecipe()">Find a Recipe</button>
 			</div>
