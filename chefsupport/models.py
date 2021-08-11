@@ -11,4 +11,3 @@ class Recipe(models.Model):
     def __str__(self):
         return self.title + " " + str(self.ingredients) + " " + str(self.directions) + " " + self.image
 
-
