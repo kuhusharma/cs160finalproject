@@ -45,10 +45,20 @@
 	}
 
 	.recipe {
-		height: 175px;
-		width: 175px;
+		height: 210px;
+		width: 210px;
 		background-color: #D3D3D3;
 		border-radius: 25px;
+	}
+
+	.recipe-image {
+		height: 150px;
+		width: 150px;
+		border: #A6D3A0 solid 3px;
+	}
+
+	.recipe:hover {
+		border:	#A6D3A0 solid 3px;
 	}
 
 	::-webkit-scrollbar {
@@ -75,29 +85,34 @@
 		<div class="row justify-content-center">
 			<div class="col-10 mt-4">
 				<div class="d-flex align-items-center">
-					<div class="h4">Recipes you can make with your (0) ingredients</div> <button type="button" class='btn btn-dark ml-auto'>Go Back</button>
+					<div class="h4">Recipes you can make with your (<span id="counter" class="h4">0</span>) ingredients</div> <button type="button" class='btn btn-dark ml-auto'>Go Back</button>
 				</div>
 			</div>
 		</div>
 		<div class="row justify-content-center">
 			<div class="col-10 mt-3 section">
 				<div class="d-flex flex-row overflow-auto justify-content-center p-4 flex-wrap recipe-scroll">
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
-					<div class="recipe m-4"></div>
+					<div class="recipe m-3">
+						<div class="recipe-image mx-auto mt-4">
+
+						</div>
+						<p class="text-center">Recipe Name</p>
+					</div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
+					<div class="recipe m-3"></div>
 
 				</div>
 			</div>
