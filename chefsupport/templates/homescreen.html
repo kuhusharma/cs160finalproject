@@ -60,6 +60,18 @@
 			source: availableTags
 		});
 	});
+
+
+	$(document).keyup(function (e) {
+		if ($(".input:focus") && (e.keyCode === 13)) {
+
+			// IMPLEMENT ONLY ABLE TO ADD AVAILABLE OPTIONS
+
+		 	$("#ingredients-list").append("<li>" + $("#tags").val() + "</li>");
+		}
+ 	});
+
+
 	</script>
 	<style type="text/css">
 	* {
@@ -116,7 +128,6 @@
 		max-height: 400px;
 		overflow-y: auto;
 	}
-
 
 	</style>
 </head>
