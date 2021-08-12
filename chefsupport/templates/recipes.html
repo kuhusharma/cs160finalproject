@@ -104,7 +104,7 @@
 			<div class="col-10 mt-3 section">
 				<div class="d-flex flex-row overflow-auto justify-content-center p-4 flex-wrap recipe-scroll">
 					{% for recipe in recipes %}
-					<div class="recipe m-3" onclick="displayRecipe()">
+					<div class="recipe m-3" onclick="displayRecipe({{recipe.ingredients}}, {{recipe.directions}})">
 						<div class="recipe-image mx-auto mt-4">
 							<img src={{ recipe.image }} class="recipe-img mx-auto d-block img-fluid" style="max-height: 100%; min-width: 100%; min-height: 100%" />	
 						</div>
@@ -129,9 +129,9 @@
 	
 	<script type="text/javascript">
 
-		function displayRecipe() {
-			var ingredients = ['chocolate ice cream (2 scoops)', 'milk (½ cup)', 'chocolate syrup', 'whipped cream']
-			var directions = ['Put 2 scoops of chocolate ice cream into a blender. Add the milk.', 'Blend the milk and ice cream together and serve immediately.', 'Top with the whipped cream and chocolate syrup.']
+		function displayRecipe(ingredients, directions) {
+			console.log(ingredients);
+			console.log(directions);
 			var ingstr = "<ul>";
 			var dirstr = "<ol>";
 			ingredients.forEach(function(element) {
