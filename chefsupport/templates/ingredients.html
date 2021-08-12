@@ -50,9 +50,7 @@
 	}
 	
 	.find-recipe {
-		position: absolute;
-		bottom: 16px;
-		right: 28px;
+		float: right;
 	}
 
     .recipe-scroll {
@@ -131,16 +129,16 @@
                     </div>
 				</div>
 			</div>
-			<div class="col-5 mt-2 ml-5 p-5 find-recipe-container section recipe-scroll">
+			<div class="col-5 mt-2 ml-5 p-5 find-recipe-container section">
 				<div class="row">
-                    <div class="col subsection">
+                    <div class="col subsection overflow-auto">
                         <p class="h3">Ingredients</p>
 						<div id="ing-list"></div>
                     </div>
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col subsection">
+                    <div class="col subsection overflow-auto">
                         <p class="h3">Directions</p>
 						<div id="dir-list"></div>
 					</div>
